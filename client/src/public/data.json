@@ -1,0 +1,33 @@
+{
+  "experiences": [
+    {
+      "slug": "alps-ski",
+      "title": "Ski Alps",
+      "location": "Alperna",
+      "image": "/img/alps.jpg",
+      "tags": ["ski", "snow"],
+      "teaser": "Puder och pister."
+    },
+    {
+      "slug": "kenya-safari",
+      "title": "Safari Kenya",
+      "location": "Kenya",
+      "image": "/img/safari.jpg",
+      "tags": ["safari", "wildlife"],
+      "teaser": "Big Five och savann."
+    },
+    {
+      "slug": "tenerife-sun",
+      "title": "Teneriffa Sol",
+      "location": "Spanien",
+      "image": "/img/sun.jpg",
+      "tags": ["sun", "beach"],
+      "teaser": "Strand och tapas."
+    }
+  ],
+  "articles": [
+    { "id": 1, "title": "Varför Alperna i januari?", "body": "..." },
+    { "id": 2, "title": "Så väljer du safari", "body": "..." },
+    { "id": 3, "title": "Res med barn – checklistan", "body": "..." }
+  ]
+}
