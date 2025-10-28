@@ -1,0 +1,53 @@
+{
+  "experiences": [
+    {
+      "slug": "lapland-northern-lights",
+      "title": "Northern Lights in Lapland",
+      "location": "Swedish Lapland",
+      "image": "https://picsum.photos/seed/travel/960/540",
+      "tags": ["northern lights", "winter", "lapland"],
+      "teaser": "Experience the magical aurora borealis in Sweden's wilderness with dog sledding and ice hotels."
+    },
+    {
+      "slug": "stockholm-archipelago",
+      "title": "Stockholm Archipelago Tour",
+      "location": "Stockholm, Sweden",
+      "image": "https://picsum.photos/seed/archipelago/960/540",
+      "tags": ["archipelago", "islands", "boat tour"],
+      "teaser": "Explore Sweden's stunning archipelago with 30,000 islands, skerries, and traditional summer houses."
+    },
+    {
+      "slug": "gothenburg-west-coast",
+      "title": "West Coast Seafood Adventure",
+      "location": "Gothenburg, Sweden",
+      "image": "https://picsum.photos/seed/seafood/960/540",
+      "tags": ["seafood", "coast", "fishing"],
+      "teaser": "Discover Sweden's west coast with fresh seafood, fishing villages, and beautiful coastal landscapes."
+    },
+    {
+      "slug": "midnight-sun-kiruna",
+      "title": "Midnight Sun Experience",
+      "location": "Kiruna, Sweden",
+      "image": "https://picsum.photos/seed/midnight/960/540",
+      "tags": ["midnight sun", "summer", "hiking"],
+      "teaser": "Experience 24-hour daylight in Sweden's northernmost city with hiking and Sami culture."
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Best Time to See Northern Lights",
+      "body": "The optimal period is September to March, with clear, dark skies away from city lights. Swedish Lapland offers some of the world's best viewing conditions."
+    },
+    {
+      "id": 2,
+      "title": "Swedish Archipelago Guide",
+      "body": "Take ferry boats between islands, stay in traditional red cottages, and enjoy fresh seafood. Summer months offer the warmest weather and longest days."
+    },
+    {
+      "id": 3,
+      "title": "Planning Your Swedish Adventure",
+      "body": "Book accommodations early, especially for northern lights season. Consider the midnight sun period for unique hiking experiences in endless daylight."
+    }
+  ]
+}
