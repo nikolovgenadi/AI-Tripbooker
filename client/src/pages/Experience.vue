@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
+import type { DataResponse, Experience } from '@/types';
 
 const route = useRoute();
 // data arrays
-const data = ref({ experiences: [], articles: [] });
+const data = ref<DataResponse>({ experiences: [], articles: [], packages: [] });
 
 // gets slug from the URL params
 const slug = computed(() => route.params.slug as string);
 
 // find the specific experience with slug
-const experience = computed(() => {
+const experience = computed((): Experience | undefined => {
   return data.value.experiences.find((exp) => exp.slug === slug.value);
 });
 

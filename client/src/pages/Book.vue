@@ -2,6 +2,7 @@
 import { onMounted, ref, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useCartStore } from '@/stores/cart';
+import type { DataResponse, Experience, Package } from '@/types';
 
 // get url parameter and router
 const route = useRoute();
@@ -9,15 +10,15 @@ const router = useRouter();
 const cartStore = useCartStore();
 
 // data and experience loading (similar to experience.vue)
-const data = ref({ experiences: [], articles: [], packages: [] });
+const data = ref<DataResponse>({ experiences: [], articles: [], packages: [] });
 const slug = computed(() => route.params.slug as string);
-const experience = computed(() => {
+const experience = computed((): Experience | undefined => {
   return data.value.experiences.find((exp) => exp.slug === slug.value);
 });
 
 // get add-on packages
-const addonPackages = computed(() => {
-  return data.value.packages.filter((pkg: any) => pkg.type === 'addon');
+const addonPackages = computed((): Package[] => {
+  return data.value.packages.filter((pkg) => pkg.type === 'addon');
 });
 
 // form state - just basic inputs for now

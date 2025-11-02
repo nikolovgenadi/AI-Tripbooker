@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { onMounted, ref, computed, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import type { DataResponse } from '@/types';
 
 // get route and router for query params
 const route = useRoute();
 const router = useRouter();
 
-const data = ref({ experiences: [], articles: [] });
+const data = ref<DataResponse>({ experiences: [], articles: [], packages: [] });
 
 // search criteria for user filtering
 const searchQuery = ref('');

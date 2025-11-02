@@ -2,8 +2,9 @@
 import { onMounted, ref } from 'vue';
 import { useCartStore } from '@/stores/cart';
 import { useRouter } from 'vue-router';
+import type { DataResponse, Package } from '@/types';
 
-const data = ref({ packages: [], articles: [] });
+const data = ref<DataResponse>({ packages: [], articles: [], experiences: [] });
 const cartStore = useCartStore();
 const router = useRouter();
 
@@ -14,7 +15,7 @@ onMounted(async () => {
 });
 
 // add package to cart function
-function addPackageToCart(pkg: any) {
+function addPackageToCart(pkg: Package) {
   cartStore.addPackage({
     packageId: pkg.id,
     packageTitle: pkg.title,
