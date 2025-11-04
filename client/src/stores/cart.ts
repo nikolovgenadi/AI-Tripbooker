@@ -27,6 +27,18 @@ export const useCartStore = defineStore(
     const experienceItems = ref<CartItem[]>([]);
     const packageItems = ref<PackageItem[]>([]);
 
+    // clear cart if !authenticated
+    const clearCartIfNotAuthenticated = () => {
+      const authToken = localStorage.getItem('authToken');
+      if (!authToken) {
+        experienceItems.value = [];
+        packageItems.value = [];
+      }
+    };
+
+    // check auth status on store initialization
+    clearCartIfNotAuthenticated();
+
     // computed values (auto-calculated when items change)
     const totalItems = computed(
       () => experienceItems.value.length + packageItems.value.length
@@ -49,7 +61,11 @@ export const useCartStore = defineStore(
 
     // actions for experiences
     function addExperience(item: CartItem) {
-      experienceItems.value.push(item);
+      // Only add to cart if user is authenticated
+      const authToken = localStorage.getItem('authToken');
+      if (authToken) {
+        experienceItems.value.push(item);
+      }
     }
 
     function removeExperience(index: number) {
@@ -58,7 +74,11 @@ export const useCartStore = defineStore(
 
     // actions for packages
     function addPackage(item: PackageItem) {
-      packageItems.value.push(item);
+      // Only add to cart if user is authenticated
+      const authToken = localStorage.getItem('authToken');
+      if (authToken) {
+        packageItems.value.push(item);
+      }
     }
 
     function removePackage(index: number) {
@@ -68,6 +88,7 @@ export const useCartStore = defineStore(
     function clearCart() {
       experienceItems.value = [];
       packageItems.value = [];
+      // No need to clear localStorage since we're not persisting cart anymore
     }
 
     return {
@@ -84,8 +105,6 @@ export const useCartStore = defineStore(
       removePackage,
       clearCart,
     };
-  },
-  {
-    persist: true,
   }
+  // Removed persist: true - cart no longer saves to localStorage
 );

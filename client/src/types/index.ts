@@ -1,5 +1,3 @@
-// Common types for the trip booking application
-
 export interface Package {
   id: number;
   title: string;
