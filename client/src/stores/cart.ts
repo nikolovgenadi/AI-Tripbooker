@@ -105,6 +105,8 @@ export const useCartStore = defineStore(
       removePackage,
       clearCart,
     };
+  },
+  {
+    persist: true, // enables localStorage persistence
   }
-  // Removed persist: true - cart no longer saves to localStorage
 );

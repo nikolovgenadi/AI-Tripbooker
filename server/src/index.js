@@ -6,6 +6,7 @@ require('dotenv').config();
 // import routes
 const authRoutes = require('./routes/auth');
 const bookingRoutes = require('./routes/bookings');
+const aiRoutes = require('./routes/ai');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -29,6 +30,9 @@ app.use('/api/auth', authRoutes);
 
 // booking routes
 app.use('/api/bookings', bookingRoutes);
+
+// AI routes
+app.use('/api/ai', aiRoutes);
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`server at http://localhost:${PORT}`);

@@ -1,22 +1,39 @@
-# Backend-TripBooker
+# AI TripBooker - Intelligent Travel Planning Service
 
-Fullstack project with Vue frontend and Express backend.
+# Vad gör tjänsten?
 
-# Stack:
+AI TripBooker är en researetjänst som använder OpenAI:s GPT-modell 3.5 för att skapa personaliserade reseförslag och detaljerade reseplaner. Tjänsten kombinerar AI-genererade rekommendationer med en traditionell bokningsplattform för upplevelser i Bulgarien.
 
-Node.js + Express.js
-PostgreSQL (Render.com free)
-Prisma ORM
-JWT Authentication
-bcrypt password hashing
+# Huvudfunktioner
 
-# Frontend
+- AI-drivna reseförslag - Få personaliserade rekommendationer baserat på destination, intressen och budget
+- Upplevelsebokning - Boka rekommenderade upplevelser och paket
+- Användarhantering - Personliga konton för att göra bokningar
 
-Vue
-Pinia
-Vue Router
-Tailwind CSS
-TypeScript
+# Målgrupp
+
+Primär målgrupp är resenärer som planerar semester eller weekendresor till Bulgarien
+Sekundär målgrupp är personer som vill ha AI-assistans för reseplanering.
+
+# Avvägningar om etik och säker användning
+
+# Etiska överväganden
+
+AI-transparens: Användare informeras tydligt om att rekommendationer genereras av AI och bör verifieras med andra källor. AI-förslag presenteras som rekommendation och inte planering.
+
+Datahantering: Användardata som destination, intressen och budget används endast för att generera rekommendationer och lagras säkert. Ingen personlig information delas med tredje part utan användarens samtycke.
+
+Bias och rättvisa: AI-modellen kan ha inneboende bias. Jag har inte kontroll över modellen och kan endast erbjuda mångsidiga reseförslag som inkluderar olika typer av upplevelser och budgetalternativ för att motverka potentiell snedvridning mot bäst marknadsförda förslag online.
+
+# Säkerhetsåtgärder
+
+API-säkerhet: OpenAI API-nycklar lagras säkert på servern och exponeras aldrig i frontend-kod. Alla AI-anrop sker via autentiserade backend-endpoints.
+
+Användarautentisering: JWT-baserad autentisering med bcrypt-hashade lösenord. Sessioner löper ut automatiskt för att minimera säkerhetsrisker.
+
+Inputvalidering: Grundläggande validering på både frontend (required-fält, minlängd) och backend (kontroll av obligatoriska fält) för att säkerställa datakvalitet. Prisma ORM ger skydd mot SQL-injection.
+
+CORS-skydd: Konfigurerat för att endast tillåta förfrågningar från auktoriserade domäner och förhindra cross-origin attacker.
 
 # Before cloning this repo, make sure you have:
 
@@ -218,8 +235,9 @@ npm run preview # Preview production build
 - [JWT Authentication Guide](https://jwt.io/)
 - [ChatGPT](https://chatgpt.com/)
 - [Tons of it :D Google Search](https://google.com)
+- [OpenAI documentation](https://platform.openai.com/docs/quickstart)
 
-# I've used some AI to help with the project:
+# I've used ChatGPT AI to help with the project:
 
 - Troubleshooting/Error handling
 - File structure

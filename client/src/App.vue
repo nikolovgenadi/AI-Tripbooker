@@ -35,6 +35,12 @@ const handleLogout = () => {
           >
             Cart ({{ cartStore.totalItems }})
           </router-link>
+          <router-link
+            to="/ai-recommendations"
+            class="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+          >
+            AI Recommendations
+          </router-link>
         </div>
 
         <!-- auth options -->

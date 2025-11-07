@@ -7,6 +7,7 @@ const Book = () => import('../pages/Book.vue');
 const Cart = () => import('../pages/Cart.vue');
 const Login = () => import('../pages/Login.vue');
 const Register = () => import('../pages/Register.vue');
+const AIRecommendations = () => import('../pages/AIRecommendations.vue');
 
 export default createRouter({
   history: createWebHistory(),
@@ -18,5 +19,9 @@ export default createRouter({
     { path: '/cart', component: Cart },
     { path: '/login', component: Login },
     { path: '/register', component: Register },
+    {
+      path: '/ai-recommendations',
+      component: AIRecommendations,
+    },
   ],
 });
