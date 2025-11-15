@@ -64,7 +64,10 @@ const login = async (req, res) => {
 
     // validate input
     if (!email || !password) {
-      return res.status(400).json({ error: 'need email and password' });
+      const newLocal = res
+        .status(400)
+        .json({ error: 'need email and password' });
+      return newLocal;
     }
 
     // find user

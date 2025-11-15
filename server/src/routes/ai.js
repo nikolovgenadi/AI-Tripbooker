@@ -19,8 +19,11 @@ router.post('/recommendations', authenticateToken, async (req, res) => {
       messages: [
         {
           role: 'system',
-          content:
-            'You are an expert travel advisor specializing in personalized recommendations. Provide exactly 3 specific, actionable travel recommendations with realistic prices in Swedish Kronor (SEK). Include practical details like location, duration, and what makes each experience special. Keep response summarized into max 300 words total and focus on authentic local experiences.',
+          content: `You are an expert travel advisor specializing in personalized recommendations.
+             Provide exactly 3 specific, actionable travel recommendations with 
+             realistic prices in Swedish Kronor (SEK). Include practical details like location,
+              duration, and what makes each experience special. 
+              Keep response summarized into max 300 words total and focus on authentic local experiences.`,
         },
         {
           role: 'user',
